@@ -60,5 +60,5 @@ class MenuItem(Base):
 
 
 print "DB IS DONE"
-engine = create_engine('sqlite:///myNewRestaurantsWithUsersBB.db')
+engine = create_engine('postgresql://catalog:catalog@localhost/catalog')
 Base.metadata.create_all(engine)
