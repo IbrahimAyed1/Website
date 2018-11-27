@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create a new menu item</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Quicksand|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+<form action="{{url_for('newMenuItem',restaurant_id=restaurant_id)}} " method="POST">
+    <p>Name:</p>
+        <input type="text" size="30" name="name" required>
+    <p>Price:</p>
+        <input type="text" size="30" name="price" required>
+    <p>Description:</p>
+        <input type="text" size="30" name="description" required >
+    <p>Course:</p>
+        <dd>
+        <input type="radio" size="30" name="course" value="Appetizer" required>Appetizer
+        </dd>
+
+        <dd>
+            <input type="radio" size="30" name="course" value="Entree" required>Entree
+        </dd>
+
+        <dd>
+            <input type="radio" size="30" name="course" value="Dessert" required>Dessert
+        </dd>
+
+        <dd>
+            <input type="radio" size="30" name="course" value="Beverage" required>Beverage
+        </dd>
+    <input type="submit" value="Create" class="inputButton">
+    <a class="myButton" href="{{
+        url_for('showMenu',restaurant_id=restaurant_id)
+     }} ">Cancel</a>
+</form>
+</body>
+</html>

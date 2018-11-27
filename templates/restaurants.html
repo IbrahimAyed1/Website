@@ -1,0 +1,46 @@
+    {% extends "main.html" %}
+    {% block content %}
+    {% include "restaurants-header.html" %}
+
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li><strong>{{message}}</strong></li>
+        </ul>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <h2>
+      <a class="create-item" href="{{ url_for('newRestaurant') }}">
+          Create a new restaurant
+      </a>
+    </h2>
+
+    <span>
+        {% for restaurant in restaurants %}
+
+        <h2 class="restaurantName">{{restaurant.name}} Restaurant</h2>
+
+        <a class="myButton" href=" {{
+            url_for('showMenu',restaurant_id = restaurant.id)
+            }}">
+            Show {{ restaurant.name }} Menu</a>
+
+        <a class="myButton" href="{{
+            url_for('editRestaurant',
+            restaurant_id = restaurant.id)
+        }}">Edit</a>
+
+        <a class="myButton" href="{{
+            url_for('deleteRestaurant',
+            restaurant_id = restaurant.id)
+        }}">Delete</a>
+
+
+
+        {% endfor %}
+    </span>
+  {% endblock %}

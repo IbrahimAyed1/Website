@@ -1,0 +1,12 @@
+    {% extends "main.html" %}
+    {% block content %}
+    {% include "restaurants-header.html" %}
+
+  <span>
+        {% for restaurant in restaurant %}
+        <a href = "{{url_for('showMenu', restaurant_id = restaurant.id)}}">
+            <h2 class="restaurantName">{{restaurant.name}} Restaurant</h2>
+        </a>
+        {% endfor %}
+    </span>
+  {% endblock %}

@@ -1,0 +1,38 @@
+    {% extends "main.html" %}
+    {% block content %}
+    {% include "header.html" %}
+
+    <section class="page-content">
+        <h3><a class="create-item" href="{{ url_for('showRestaurants')}}">Show My Restaurants Menu</a></h3>
+
+    {% for item in items %}
+        {% if item.course=="Entree" %}
+            <h2>Entree</h2>
+            <p>Name:{{ item.name }}</p>
+            <p>Price:{{ item.price }}</p>
+            <p>Description: {{ item.description }}</p>
+
+        {% endif %}
+
+        {% if item.course=="Appetizer" %}
+            <h2>Appetizers</h2>
+            <p>Name:{{ item.name }}</p>
+            <p>Price:{{ item.price }}</p>
+            <p>Description: {{ item.description }}</p>
+
+        {% endif %}
+         {% if item.course=='Dessert' %}
+            <h2>Desserts</h2>
+            <p>Name:{{ item.name }}</p>
+                <p>Price:{{ item.price }}</p>
+                <p>Description: {{ item.description }}</p>
+        {% endif %}
+        {% if item.course=='Beverage' %}
+            <h2>Beverages</h2>
+            <p>Name:{{ item.name }}</p>
+                <p>Price:{{ item.price }}</p>
+                <p>Description: {{ item.description }}</p>
+        {% endif %}
+    {% endfor %}
+    </section>
+    {% endblock %}

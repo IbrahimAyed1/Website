@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit restaurant</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Quicksand|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <h1>Edit restaurant  <strong>{{restaurant.name}}</strong></h1>
+    <form name="editForm" action="{{ url_for('editRestaurant',restaurant_id=restaurant.id) }}" method="POST">
+        <input name='name' type="text" size="30"  placeholder="{{restaurant.name}}" required>
+        <input type="submit" value="Edit">
+        <a href="{{ url_for('showRestaurants') }}">Cancel</a>
+    </form>
+</body>
+</html>

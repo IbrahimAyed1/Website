@@ -1,0 +1,24 @@
+ <div class="logs">
+        {%if 'username' not in session %}
+			<a href="{{url_for('showLogin')}}">Login From Here </a>
+			{% else %}
+			<a href="{{url_for('disconnect')}}">Logout </a>
+			{% endif %}
+ </div>
+<header class="page-header">
+     <div>
+    <h1>Welcome , Choose a restaurant</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li><strong>{{message}}</strong></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <!-- A link to create a new restaurant menu item  -->
+    <!--Viewing Restaurant Menu Items-->
+     </div>
+
+</header>

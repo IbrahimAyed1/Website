@@ -1,0 +1,99 @@
+body{
+	background-color: #F8333C;
+	margin:0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	color: #BFEDEF;
+}
+a{
+	text-decoration: none;
+	color:#772E25;
+}
+h2{
+	color:#FCAB10;
+}
+p{
+	font-family: 'Quicksand', sans-serif;
+	word-spacing: 1px
+}
+.myButton{
+	width: 30px;
+	padding: 5px;
+	color: black;
+	border: 1px solid black;
+	border-radius: 2%;
+	font-family: 'Source Code Pro', monospace;
+}
+.myButton:hover{
+	background-color:#FFDC73;
+	color: #F8333C;
+	border:1px solid #FFBF00;
+	border-radius: 2%;
+}
+.inputButton{
+	width: 65px;
+	padding: 5px;
+	color: black;
+	border: 1px solid black;
+	border-radius: 2%;
+	font-family: 'Source Code Pro', monospace;
+	background-color: transparent;
+}
+.inputButton:hover{
+	background-color:#FFDC73;
+	color: #F8333C;
+	border:1px solid #FFBF00;
+	border-radius: 2%;
+}
+.fb-login-button{
+	padding: 5px;
+	margin:2px;
+}
+/* THIS STYLING IS FOR MENU ITEMS PAGE */
+.logs{
+	box-sizing: border-box;
+	height:40px;
+	width:100%;
+    background-color:#FCAB10;
+    font-size:1.2em
+}
+.page-header{
+	text-align: center;
+	border-bottom: 1px solid #2A4747;
+	height: 500px;
+	background-image: url('/static/images/bgt.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	}
+.page-header div{
+	background-color: rgba(43,158,179,.4); 
+	height:500px;
+}
+.page-header div h1{
+	position: relative;
+	top:35%;
+	font-size: 3em;
+	margin:0 auto;
+	width: 35%;
+	padding: 20px;
+	
+	color: #FCAB10;
+	font-family: 'Source Code Pro', monospace;
+	text-transform:uppercase;
+}
+.create-item {
+	display: block;
+	width: 30%;
+	padding: 10px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	font-family: 'Source Code Pro', monospace;
+	
+}
+
+.create-item:hover{
+
+	box-shadow: 1px 1px 4px 1px  #DBD5B5;
+	background-color: #FCAB10;
+	color: #FFF;
+}
